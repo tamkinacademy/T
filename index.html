@@ -116,13 +116,13 @@ $('#lg').textContent=M.initials;$('#lgn').textContent=M.name;$('#nm').textConten
 $('#badge').textContent=M.badge;$('#avl').textContent=M.available;$('#qt').textContent=M.quote;
 $('#av').innerHTML=M.photo?`<img src="${esc(M.photo)}" alt="${esc(M.name)}">`:`<b>${esc(M.initials)}</b>`;
 $('#talk').href=wa('আসসালামু আলাইকুম, আপনার পোর্টফোলিও দেখে মেসেজ করছি।');$('#wa2').href=$('#talk').href;
-$('#chips').innerHTML=`<a class="chip" target="_blank" rel="noopener" href="${wa()}">📞 ${esc(M.phoneShow)}</a><a class="chip" target="_blank" rel="noopener" href="https://github.com/${esc(M.github)}">⌨ github.com/${esc(M.github)}</a>${M.facebook?`<a class="chip" target="_blank" rel="noopener" href="${esc(M.facebook)}">📘 Facebook</a>`:''}${M.youtube?`<a class="chip" target="_blank" rel="noopener" href="${esc(M.youtube)}">▶ YouTube</a>`:''}`;
+$('#chips').innerHTML=`<a class="chip" target="_blank" rel="noopener" href="${wa()}">📞 ${esc(M.phoneShow)}</a><a class="chip" target="_blank" rel="noopener" href="${esc(M.site||'https://github.com/'+M.github)}">🌐 ${esc((M.site||'github.com/'+M.github).replace(/^https?:\/\//,''))}</a>${M.facebook?`<a class="chip" target="_blank" rel="noopener" href="${esc(M.facebook)}">📘 Facebook</a>`:''}${M.youtube?`<a class="chip" target="_blank" rel="noopener" href="${esc(M.youtube)}">▶ YouTube</a>`:''}`;
 const tkI=(M.ticker||[]).map(t=>`<span><b>✦</b>${esc(t)}</span>`).join('');$('#tk').innerHTML=tkI+tkI;
 $('#stats').innerHTML=(M.stats||[]).map((s,i)=>`<div class="st"><b data-n="${s.n}" data-s="${esc(s.s||'')}">${bn(0)}</b><span>${esc(s.t)}</span></div>`).join('');
 $('#sv').innerHTML=(M.services||[]).map(s=>`<div class="card rv"><div class="ic">${s.i}</div><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p></div>`).join('');
 $('#pj').innerHTML=(M.projects||[]).map(p=>`<div class="pj rv"><span class="tg">${esc(p.tag)}</span><h3>${esc(p.t)}</h3><p>${esc(p.d)}</p><a class="btn s" target="_blank" rel="noopener" href="${esc(p.link)}">${esc(p.btn||'দেখো')} ↗</a></div>`).join('');
 $('#tl').innerHTML=(M.journey||[]).map(j=>`<div class="ti rv"><small>${esc(j.d)}</small><h3>${esc(j.t)}</h3><p>${esc(j.x)}</p></div>`).join('');
-$('#cn').innerHTML=`<a target="_blank" rel="noopener" href="${wa()}"><b>WHATSAPP</b>${esc(M.phoneShow)}</a><a target="_blank" rel="noopener" href="https://github.com/${esc(M.github)}"><b>GITHUB</b>${esc(M.github)}</a><a target="_blank" rel="noopener" href="${wa('আসসালামু আলাইকুম')}"><b>মেসেজ</b>সরাসরি চ্যাট</a>${M.facebook?`<a target="_blank" rel="noopener" href="${esc(M.facebook)}"><b>FACEBOOK</b>ফেসবুকে দেখো</a>`:''}${M.youtube?`<a target="_blank" rel="noopener" href="${esc(M.youtube)}"><b>YOUTUBE</b>চ্যানেল দেখো</a>`:''}`;
+$('#cn').innerHTML=`<a target="_blank" rel="noopener" href="${wa()}"><b>WHATSAPP</b>${esc(M.phoneShow)}</a><a target="_blank" rel="noopener" href="${esc(M.site||'https://github.com/'+M.github)}"><b>WEBSITE</b>${esc((M.site||M.github).replace(/^https?:\/\//,''))}</a><a target="_blank" rel="noopener" href="${wa('আসসালামু আলাইকুম')}"><b>মেসেজ</b>সরাসরি চ্যাট</a>${M.facebook?`<a target="_blank" rel="noopener" href="${esc(M.facebook)}"><b>FACEBOOK</b>ফেসবুকে দেখো</a>`:''}${M.youtube?`<a target="_blank" rel="noopener" href="${esc(M.youtube)}"><b>YOUTUBE</b>চ্যানেল দেখো</a>`:''}`;
 $('#fm').onsubmit=e=>{e.preventDefault();open(wa(`আসসালামু আলাইকুম, আমি ${$('#fn').value.trim()}। আমার কাজ: ${$('#fx').value.trim()}`),'_blank')};
 $('#bg').onclick=()=>$('#links').classList.toggle('open');$('#links').onclick=()=>$('#links').classList.remove('open');
 // typing
@@ -146,8 +146,10 @@ document.querySelectorAll('.rv').forEach(x=>io.observe(x));
   x.textAlign='left';x.fillStyle='#eaf0ff';x.font='700 62px Arial, sans-serif';x.fillText(M.name||'',70,260);
   x.fillStyle='#22d3ee';x.font='600 28px "Hind Siliguri",Arial,sans-serif';x.fillText(M.badge||'',70,308);
   x.fillStyle='#8b98b8';x.font='500 26px "Hind Siliguri",Arial,sans-serif';
-  x.fillText('📞  '+(M.phoneShow||''),70,404);x.fillText('⌨  github.com/'+(M.github||''),70,448);
-  x.fillStyle='#22d3ee';x.font='600 20px Arial';x.textAlign='right';x.fillText('DIGITAL BUSINESS CARD',W-70,H-60);}
+  x.fillText('📞  '+(M.phoneShow||''),70,404);x.fillText('🌐  '+(M.site||'github.com/'+M.github).replace(/^https?:\/\//,''),70,448);
+  x.fillStyle='#22d3ee';x.font='600 20px Arial';x.textAlign='right';x.fillText('DIGITAL BUSINESS CARD',W-70,H-60);
+  if(ph&&ph.complete&&ph.naturalWidth){x.save();x.beginPath();x.roundRect(690,70,240,240,28);x.clip();x.drawImage(ph,690,70,240,240);x.restore();x.strokeStyle='#22d3ee';x.lineWidth=3;x.beginPath();x.roundRect(690,70,240,240,28);x.stroke()}}
+ let ph=null;if(M.photo){ph=new Image();ph.onload=draw;ph.src=M.photo}
  draw();document.fonts&&document.fonts.ready.then(draw);
  $('#dl').onclick=()=>{const a=document.createElement('a');a.download=(M.name||'card')+'-card.png';a.href=c.toDataURL('image/png');a.click()};
 })();
