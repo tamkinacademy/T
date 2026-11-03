@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TAMKEEN · ছাত্র, নির্মাতা, লেখক</title>
+<meta name="description" content="TAMKEEN-এর পোর্টফোলিও: ওয়েবসাইট, গ্রাফিক ডিজাইন, ই-বুক ও ইংরেজি শেখার প্রজেক্ট।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050914;--bg2:#0a1124;--card:#0c1530;--line:#ffffff12;--line2:#ffffff22;--text:#eaf0ff;--mute:#8b98b8;--a:#22d3ee;--a2:#3b82f6;--a3:#818cf8;--g:#34d399;--head:'Space Grotesk','Hind Siliguri',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Hind Siliguri',sans-serif;line-height:1.65;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(700px 400px at 80% -5%,#22d3ee1c,transparent 60%),radial-gradient(600px 400px at 0% 30%,#3b82f620,transparent 60%);pointer-events:none;z-index:0}
+a{color:inherit;text-decoration:none}.wrap{max-width:1040px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:#050914cc;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nv{display:flex;align-items:center;gap:12px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:700;letter-spacing:.02em}
+.logo i{font-style:normal;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--a),var(--a2));color:#031018;display:grid;place-items:center;font-size:14px}
+.sp{flex:1}.links{display:flex;gap:22px;color:var(--mute);font-size:15px}.links a:hover{color:var(--a)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:600 15px 'Hind Siliguri';padding:11px 22px;border-radius:99px;background:linear-gradient(135deg,var(--a),var(--a2));color:#031018;transition:.25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px -10px var(--a)}
+.btn.g{background:#ffffff0a;color:var(--text);border:1px solid var(--line2)}.btn.g:hover{border-color:var(--a);box-shadow:none}
+.btn.s{padding:8px 18px;font-size:14px}
+.burger{display:none;background:none;border:1px solid var(--line2);color:var(--text);width:38px;height:38px;border-radius:10px;font-size:18px;cursor:pointer}
+@media(max-width:760px){.links{display:none;position:absolute;top:62px;left:0;right:0;background:#050914f5;flex-direction:column;padding:16px 20px;gap:14px;border-bottom:1px solid var(--line)}.links.open{display:flex}.burger{display:block}}
+/* hero */
+.hero{padding:54px 0 30px;text-align:center}
+.av{width:190px;height:190px;border-radius:50%;margin:0 auto 22px;padding:5px;background:conic-gradient(from 0deg,var(--a),var(--a3),var(--a2),var(--a));animation:spin 8s linear infinite;box-shadow:0 0 70px -10px #22d3ee66}
+.av>div{width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 30% 20%,#16264d,#070d20);display:grid;place-items:center;overflow:hidden;animation:spin 8s linear infinite reverse}
+.av b{font-family:var(--head);font-size:64px;background:linear-gradient(135deg,var(--a),var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent}.av img{width:100%;height:100%;object-fit:cover}
+@keyframes spin{to{transform:rotate(360deg)}}
+.badge{display:inline-block;font-size:12px;letter-spacing:.14em;color:var(--a);border:1px solid #22d3ee44;background:#22d3ee10;padding:4px 14px;border-radius:99px;margin-bottom:14px}
+.avl{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--mute);margin:0 0 16px}.avl:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--g);box-shadow:0 0 12px var(--g)}
+h1{font-family:var(--head);font-size:clamp(38px,8vw,66px);line-height:1.1;letter-spacing:-.02em}
+h1 em{font-style:normal;background:linear-gradient(135deg,var(--a),var(--a2) 60%,var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:18px 0}
+.chip{font-size:13px;padding:6px 14px;border-radius:99px;border:1px solid var(--line2);background:#ffffff08;color:var(--text)}.chip:hover{border-color:var(--a)}
+.type{font-family:var(--head);font-size:clamp(20px,4.5vw,28px);margin:6px 0 14px;min-height:40px}.type span{color:var(--a)}.type u{display:inline-block;width:2px;height:1em;background:var(--a);vertical-align:-3px;margin-left:3px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.quote{max-width:560px;margin:0 auto 24px;color:var(--mute);font-size:17px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+/* ticker */
+.tk{margin:40px 0 0;border-block:1px solid var(--line);background:#ffffff05;overflow:hidden;position:relative;z-index:1}
+.tk div{display:flex;gap:46px;white-space:nowrap;padding:14px 0;width:max-content;animation:mq 28s linear infinite;font:600 12px var(--head);letter-spacing:.16em;color:var(--mute)}
+.tk div b{color:var(--a);margin-right:10px}@keyframes mq{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:84px 0 0}.eye{text-align:center;color:var(--a);font:600 12px var(--head);letter-spacing:.2em;margin-bottom:10px}
+h2{font-family:var(--head);text-align:center;font-size:clamp(28px,5.5vw,42px);line-height:1.2;margin-bottom:12px}
+.sub{text-align:center;color:var(--mute);max-width:560px;margin:0 auto 36px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}}
+.st{background:linear-gradient(160deg,#0f1a3a,#0a1126);border:1px solid var(--line);border-radius:18px;padding:22px 14px;text-align:center}
+.st b{display:block;font:700 40px var(--head);background:linear-gradient(135deg,var(--a),var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent}.st span{color:var(--mute);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;transition:.3s}
+.card:hover{border-color:#22d3ee55;transform:translateY(-4px);box-shadow:0 20px 50px -28px var(--a)}
+.ic{width:46px;height:46px;border-radius:13px;background:#22d3ee14;border:1px solid #22d3ee33;display:grid;place-items:center;font-size:22px;margin-bottom:14px}
+.card h3{font:600 18px var(--head);margin-bottom:6px}.card p{color:var(--mute);font-size:15px}
+.pj{background:linear-gradient(135deg,#0d1a3d,#0a1228);border:1px solid var(--line);border-radius:20px;padding:26px;margin-bottom:16px;position:relative;overflow:hidden}
+.pj:before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(#3b82f633,transparent 70%)}
+.pj .tg{display:inline-block;font-size:12px;color:var(--a);border:1px solid #22d3ee44;border-radius:99px;padding:2px 12px;margin-bottom:10px}
+.pj h3{font:700 26px var(--head);margin-bottom:6px}.pj p{color:var(--mute);margin-bottom:16px;max-width:560px}
+.tl{max-width:640px;margin:0 auto;border-left:2px solid var(--line2);padding-left:26px}
+.ti{position:relative;padding-bottom:28px}.ti:before{content:"";position:absolute;left:-34px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--a)}
+.ti small{color:var(--a);font:600 12px var(--head);letter-spacing:.1em}.ti h3{font:600 19px var(--head);margin:2px 0}.ti p{color:var(--mute)}
+.bc{max-width:520px;margin:0 auto;text-align:center}.bc canvas{width:100%;border-radius:18px;border:1px solid var(--line2);box-shadow:0 30px 80px -40px var(--a);margin-bottom:16px}
+.fm{max-width:640px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.fm label{display:block;font-size:13px;color:var(--a);margin:12px 0 6px;letter-spacing:.06em}
+.fm input,.fm textarea{width:100%;background:#00000050;border:1px solid var(--line2);color:var(--text);border-radius:12px;padding:12px 14px;font:16px 'Hind Siliguri'}
+.fm input:focus,.fm textarea:focus{outline:0;border-color:var(--a)}.fm textarea{min-height:120px;resize:vertical}.fm .btn{width:100%;justify-content:center;margin-top:18px;padding:14px}
+.cn{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:640px;margin:0 auto 22px}@media(max-width:560px){.cn{grid-template-columns:1fr}}
+.cn a{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;font-size:14px}.cn a:hover{border-color:var(--a)}.cn b{display:block;font-size:12px;color:var(--mute);font-weight:500}
+footer{margin-top:90px;border-top:1px solid var(--line);padding:26px 0;color:var(--mute);font-size:14px}.ft{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.rv{opacity:0;transform:translateY(24px);transition:.7s}.rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nv"><a class="logo" href="#top"><i id="lg"></i><span id="lgn"></span></a><div class="sp"></div>
+<div class="links" id="links"><a href="#work">কাজ</a><a href="#services">সেবা</a><a href="#journey">যাত্রা</a><a href="#card">কার্ড</a><a href="#contact">যোগাযোগ</a></div>
+<a class="btn s" id="talk" target="_blank" rel="noopener">কথা বলি</a><button class="burger" id="bg" aria-label="মেনু">☰</button></div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+ <div class="av"><div id="av"></div></div>
+ <div class="badge" id="badge"></div><br>
+ <div class="avl" id="avl"></div>
+ <h1>Hi, I'm <em id="nm"></em></h1>
+ <div class="chips" id="chips"></div>
+ <div class="type">I am a <span id="ty"></span><u></u></div>
+ <p class="quote" id="qt"></p>
+ <div class="cta"><a class="btn" href="#work">আমার কাজ দেখো ↓</a><a class="btn g" id="wa2" target="_blank" rel="noopener">WhatsApp-এ মেসেজ</a></div>
+</div>
+<div class="tk"><div id="tk"></div></div></header>
+
+<main>
+<section><div class="wrap"><div class="eye">REAL NUMBERS</div><h2>সংখ্যায় আমার কাজ</h2><p class="sub">বাড়িয়ে বলা নয়। যা সত্যি করেছি, শুধু সেটাই।</p><div class="stats rv" id="stats"></div></div></section>
+<section id="services"><div class="wrap"><div class="eye">WHAT I DO</div><h2>আমি যা করি</h2><p class="sub">ছোট বড় যেকোনো কাজ যত্ন নিয়ে করি।</p><div class="grid" id="sv"></div></div></section>
+<section id="work"><div class="wrap"><div class="eye">PORTFOLIO</div><h2>আমার প্রজেক্ট</h2><p class="sub">নিজের হাতে বানানো সাইট ও বই।</p><div id="pj"></div></div></section>
+<section id="journey"><div class="wrap"><div class="eye">MY JOURNEY</div><h2>আমার যাত্রা</h2><p class="sub">শূন্য থেকে ধাপে ধাপে।</p><div class="tl" id="tl"></div></div></section>
+<section id="card"><div class="wrap"><div class="eye">DIGITAL CARD</div><h2>আমার ডিজিটাল কার্ড</h2><p class="sub">ছবি করে সেভ করে রাখো বা কাউকে পাঠাও।</p><div class="bc rv"><canvas id="cv" width="1000" height="560"></canvas><button class="btn" id="dl">কার্ড ডাউনলোড (PNG)</button></div></div></section>
+<section id="contact"><div class="wrap"><div class="eye">GET IN TOUCH</div><h2>চলো একসাথে কিছু বানাই</h2><p class="sub">কাজের কথা সরাসরি WhatsApp-এ চলে আসবে।</p>
+ <div class="cn" id="cn"></div>
+ <form class="fm rv" id="fm"><label>আপনার নাম</label><input id="fn" placeholder="যেমন: রাহিম" required><label>কী কাজ লাগবে</label><textarea id="fx" placeholder="ওয়েবসাইট, ডিজাইন বা অন্য কিছু। সংক্ষেপে লিখুন।" required></textarea><button class="btn" type="submit">WhatsApp-এ পাঠান ➤</button></form></div></section>
+</main>
+<footer><div class="wrap ft"><span>© <span id="yr"></span> <span id="fn2"></span></span><span>হালাল পথে, সততার সাথে</span><a href="#top" style="color:var(--a)">উপরে যাও ↑</a></div></footer>
+
+<script src="data.js"></script>
+<script>
+const M=window.ME||{},$=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const bn=n=>String(n).replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]);
+const wa=t=>'https://wa.me/'+M.whatsapp+(t?'?text='+encodeURIComponent(t):'');
+document.title=M.name+' · '+(M.badge||'');
+$('#lg').textContent=M.initials;$('#lgn').textContent=M.name;$('#nm').textContent=M.name;$('#fn2').textContent=M.name;$('#yr').textContent=bn(new Date().getFullYear());
+$('#badge').textContent=M.badge;$('#avl').textContent=M.available;$('#qt').textContent=M.quote;
+$('#av').innerHTML=M.photo?`<img src="${esc(M.photo)}" alt="${esc(M.name)}">`:`<b>${esc(M.initials)}</b>`;
+$('#talk').href=wa('আসসালামু আলাইকুম, আপনার পোর্টফোলিও দেখে মেসেজ করছি।');$('#wa2').href=$('#talk').href;
+$('#chips').innerHTML=`<a class="chip" target="_blank" rel="noopener" href="${wa()}">📞 ${esc(M.phoneShow)}</a><a class="chip" target="_blank" rel="noopener" href="https://github.com/${esc(M.github)}">⌨ github.com/${esc(M.github)}</a>${M.facebook?`<a class="chip" target="_blank" rel="noopener" href="${esc(M.facebook)}">📘 Facebook</a>`:''}${M.youtube?`<a class="chip" target="_blank" rel="noopener" href="${esc(M.youtube)}">▶ YouTube</a>`:''}`;
+const tkI=(M.ticker||[]).map(t=>`<span><b>✦</b>${esc(t)}</span>`).join('');$('#tk').innerHTML=tkI+tkI;
+$('#stats').innerHTML=(M.stats||[]).map((s,i)=>`<div class="st"><b data-n="${s.n}" data-s="${esc(s.s||'')}">${bn(0)}</b><span>${esc(s.t)}</span></div>`).join('');
+$('#sv').innerHTML=(M.services||[]).map(s=>`<div class="card rv"><div class="ic">${s.i}</div><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p></div>`).join('');
+$('#pj').innerHTML=(M.projects||[]).map(p=>`<div class="pj rv"><span class="tg">${esc(p.tag)}</span><h3>${esc(p.t)}</h3><p>${esc(p.d)}</p><a class="btn s" target="_blank" rel="noopener" href="${esc(p.link)}">${esc(p.btn||'দেখো')} ↗</a></div>`).join('');
+$('#tl').innerHTML=(M.journey||[]).map(j=>`<div class="ti rv"><small>${esc(j.d)}</small><h3>${esc(j.t)}</h3><p>${esc(j.x)}</p></div>`).join('');
+$('#cn').innerHTML=`<a target="_blank" rel="noopener" href="${wa()}"><b>WHATSAPP</b>${esc(M.phoneShow)}</a><a target="_blank" rel="noopener" href="https://github.com/${esc(M.github)}"><b>GITHUB</b>${esc(M.github)}</a><a target="_blank" rel="noopener" href="${wa('আসসালামু আলাইকুম')}"><b>মেসেজ</b>সরাসরি চ্যাট</a>${M.facebook?`<a target="_blank" rel="noopener" href="${esc(M.facebook)}"><b>FACEBOOK</b>ফেসবুকে দেখো</a>`:''}${M.youtube?`<a target="_blank" rel="noopener" href="${esc(M.youtube)}"><b>YOUTUBE</b>চ্যানেল দেখো</a>`:''}`;
+$('#fm').onsubmit=e=>{e.preventDefault();open(wa(`আসসালামু আলাইকুম, আমি ${$('#fn').value.trim()}। আমার কাজ: ${$('#fx').value.trim()}`),'_blank')};
+$('#bg').onclick=()=>$('#links').classList.toggle('open');$('#links').onclick=()=>$('#links').classList.remove('open');
+// typing
+(function(){const R=M.roles||[];let i=0,j=0,del=false;const el=$('#ty');if(!R.length)return;
+ (function step(){const w=R[i];el.textContent=w.slice(0,j);
+  if(!del&&j===w.length){del=true;return setTimeout(step,1400)}
+  if(del&&j===0){del=false;i=(i+1)%R.length}
+  j+=del?-1:1;setTimeout(step,del?45:95)})()})();
+// reveal + counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('on');io.unobserve(e.target);
+ e.target.querySelectorAll&&e.target.querySelectorAll('[data-n]').forEach(c=>{const n=+c.dataset.n,s=c.dataset.s;let t0=null;(function f(t){t0=t0||t;const p=Math.min((t-t0)/1100,1);c.textContent=bn(Math.round(n*p))+(p===1?s:'');if(p<1)requestAnimationFrame(f)})(performance.now())})}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(x=>io.observe(x));
+// business card
+(function(){const c=$('#cv'),x=c.getContext('2d'),W=1000,H=560;
+ function draw(){
+  const g=x.createLinearGradient(0,0,W,H);g.addColorStop(0,'#0b1430');g.addColorStop(1,'#050914');x.fillStyle=g;x.fillRect(0,0,W,H);
+  const r=x.createRadialGradient(850,60,10,850,60,380);r.addColorStop(0,'#22d3ee40');r.addColorStop(1,'#22d3ee00');x.fillStyle=r;x.fillRect(0,0,W,H);
+  x.strokeStyle='#22d3ee55';x.lineWidth=2;x.strokeRect(24,24,W-48,H-48);
+  const lg=x.createLinearGradient(70,70,150,150);lg.addColorStop(0,'#22d3ee');lg.addColorStop(1,'#3b82f6');x.fillStyle=lg;x.beginPath();x.roundRect(70,70,76,76,20);x.fill();
+  x.fillStyle='#031018';x.font='700 32px Arial';x.textAlign='center';x.fillText(M.initials||'TK',108,119);
+  x.textAlign='left';x.fillStyle='#eaf0ff';x.font='700 62px Arial, sans-serif';x.fillText(M.name||'',70,260);
+  x.fillStyle='#22d3ee';x.font='600 28px "Hind Siliguri",Arial,sans-serif';x.fillText(M.badge||'',70,308);
+  x.fillStyle='#8b98b8';x.font='500 26px "Hind Siliguri",Arial,sans-serif';
+  x.fillText('📞  '+(M.phoneShow||''),70,404);x.fillText('⌨  github.com/'+(M.github||''),70,448);
+  x.fillStyle='#22d3ee';x.font='600 20px Arial';x.textAlign='right';x.fillText('DIGITAL BUSINESS CARD',W-70,H-60);}
+ draw();document.fonts&&document.fonts.ready.then(draw);
+ $('#dl').onclick=()=>{const a=document.createElement('a');a.download=(M.name||'card')+'-card.png';a.href=c.toDataURL('image/png');a.click()};
+})();
+</script>
+</body></html>
